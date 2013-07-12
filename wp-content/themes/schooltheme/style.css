@@ -1816,12 +1816,12 @@ background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
     width: 265px;
 }
 #contact_email {
-    float: left;
+    float: right;
     height: 15px;
     margin: 0 0 5px;
     padding: 6px 0 0;
     text-align: right;
-    width: 257px;
+    width: 75px;
 }
 #contact_email a {
     color: #FFFFFF;
@@ -1886,6 +1886,7 @@ background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
     float: left;
     height: 46px;
     position: relative;
+     z-index: 0;
 }
 #primary_nav ul li a {
     color: #FFFFFF;
@@ -2976,3 +2977,25 @@ color: #800000;
 .flexslider .slides img {
  margin-left: 1px;
 }
+#fb_likebutton {
+    float: left;
+    background-color: #ffffff;
+    margin-top: 33px;    
+    overflow: hidden;
+    position: absolute;
+     margin-left: 5px;
+     width: 165px;
+    height: 25px;
+}
+
+/*
+#fb_likebutton {
+margin-left: -79px;
+    margin-top: -9px;
+}
+#u_0_0 {
+  width: 164px;
+}
+.pls {
+ background-color: #fffff;
+}*/

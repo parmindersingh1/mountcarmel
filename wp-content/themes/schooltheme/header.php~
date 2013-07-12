@@ -34,6 +34,19 @@
 </head>
 
 <body <?php body_class(); ?> >
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="fb_likebutton">
+<div class="fb-like" data-href="https://www.facebook.com/mcschool123" data-send="false" data-width="160" data-layout="count" data-show-faces="false"></div>
+</div>
+
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		
@@ -48,7 +61,8 @@
 
 	<div id="header_utilities">
 		<div id="contact_email">
-			<a href="mailto:mail.mountcarmelchd.org">Email</a>
+
+			
 		</div>
 	<div id="search_area_wrapper">
                  <div id="search_area">
