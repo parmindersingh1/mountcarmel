@@ -47,11 +47,12 @@
 
 <div id="footer_content" class="sharing_options">
 	<h2>Sharing Options</h2>
-	            
+	         
        <?php 
-       juiz_sps();
+       //juiz_sps();
+        echo do_shortcode('[cn-social-icon]') ;
        ?>
-	</ul>
+	
 </div><!-- #footer_content -->
 
 <div id="footer_content" class="contact_details">

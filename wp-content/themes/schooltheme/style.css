@@ -243,14 +243,16 @@ li.bypostauthor cite span {
 	font-size: 0.785714286rem;
 	line-height: 1.428571429;
 	font-weight: normal;
-	color: #7c7c7c;
-	background-color: #e6e6e6;
+	background-color: #800000;
+        color:#fff;
 	background-repeat: repeat-x;
+        /* color: #7c7c7c;
+	background-color: #e6e6e6;
 	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
 	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
 	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
 	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
-	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);      
+	background-image: linear-gradient(top, #f4f4f4, #e6e6e6); */     
 	border: 1px solid #d2d2d2;
 	border-radius: 3px;
 	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
@@ -272,14 +274,14 @@ input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 article.post-password-required input[type=submit]:hover {
-	color: #5e5e5e;
-	background-color: #ebebeb;
+	color: #fff;
+	background-color: #800000;
 	background-repeat: repeat-x;
-	background-image: -moz-linear-gradient(top, #f9f9f9, #ebebeb);
+	/*background-image: -moz-linear-gradient(top, #f9f9f9, #ebebeb);
 	background-image: -ms-linear-gradient(top, #f9f9f9, #ebebeb);
 	background-image: -webkit-linear-gradient(top, #f9f9f9, #ebebeb);
 	background-image: -o-linear-gradient(top, #f9f9f9, #ebebeb);
-	background-image: linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: linear-gradient(top, #f9f9f9, #ebebeb);*/
 }
 .menu-toggle:active,
 .menu-toggle.toggled-on,
@@ -2742,7 +2744,7 @@ padding: 2px;
     background: url("images/button_bkd_home.png") no-repeat scroll 0 bottom transparent;
     width: 79px;
 }
-#primary_nav ul li.selectedPageRoot a {
+#primary_nav ul li.current-menu-item a {
     background: url("images/button_bkd_home.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li {
@@ -2756,7 +2758,7 @@ padding: 2px;
     background: url("images/button_bkd_about.png") no-repeat scroll 0 bottom transparent;
     width: 100px;
 }
-#primary_nav ul li + li.selectedPageRoot a {
+#primary_nav ul li + li.current-menu-item a {
     background: url("images/button_bkd_about.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li + li {
@@ -2770,7 +2772,7 @@ padding: 2px;
     background: url("images/button_bkd_admissions.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li.current-menu-item a {
     background: url("images/button_bkd_admissions.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li + li + li {
@@ -2784,51 +2786,56 @@ padding: 2px;
     background: url("images/button_bkd_guidelines.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li + li.current-menu-item a {
     background: url("images/button_bkd_guidelines.png") no-repeat scroll 0 bottom transparent;
 }
-#primary_nav ul li + li + li + li + li {
+
+#primary_nav ul li + li + li + li + li  {
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li a {
-    background: url("images/button_bkd_facilities.png") no-repeat scroll 0 top transparent;
+#primary_nav ul li + li + li + li + li  a {
+    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 top transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li a:hover {
-    background: url("images/button_bkd_facilities.png") no-repeat scroll 0 bottom transparent;
-    width: 116px;
+#primary_nav ul li + li + li + li + li  a:hover {
+    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
+   width: 116px;
 }
-#primary_nav ul li + li + li + li + li.selectedPageRoot a {
-    background: url("images/button_bkd_facilities.png") no-repeat scroll 0 bottom transparent;
+#primary_nav ul li + li + li + li + li.current-menu-item a {
+    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li + li + li + li + li {
     width: 116px;
 }
 #primary_nav ul li + li + li + li + li + li a {
-    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 top transparent;
-    width: 116px;
-}
-#primary_nav ul li + li + li + li + li + li a:hover {
-    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
-   width: 116px;
-}
-#primary_nav ul li + li + li + li + li + li.selectedPageRoot a {
-    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
-}
-#primary_nav ul li + li + li + li + li + li + li {
-    width: 116px;
-}
-#primary_nav ul li + li + li + li + li + li + li a {
     background: url("images/button_bkd_gallery.png") no-repeat scroll 0 top transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li + li + li a:hover {
+#primary_nav ul li + li + li + li + li + li a:hover {
     background: url("images/button_bkd_gallery.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li + li + li + li.current-menu-item a {
     background: url("images/button_bkd_gallery.png") no-repeat scroll 0 bottom transparent;
 }
+
+
+#primary_nav ul  li + li + li + li + li + li + li {
+    width: 116px;
+}
+#primary_nav ul li + li + li + li + li + li + li a {
+    background: url("images/button_bkd_media.png") no-repeat scroll 0 top transparent;
+    width: 116px;
+}
+#primary_nav ul li + li + li + li + li + li + li a:hover {
+    background: url("images/button_bkd_media.png") no-repeat scroll 0 bottom transparent;
+    width: 116px;
+}
+#primary_nav ul li + li + li + li + li + li + li.current-menu-item a {
+    background: url("images/button_bkd_media.png") no-repeat scroll 0 bottom transparent;
+}
+
+
 #primary_nav ul li + li + li + li + li + li + li + li {
     width: 116px;
 }
@@ -2840,11 +2847,9 @@ padding: 2px;
     background: url("images/button_bkd_contact.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li + li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li + li + li + li + li + li.current-menu-item a {
     background: url("images/button_bkd_contact.png") no-repeat scroll 0 bottom transparent;
 }
-
-
 
 
 #form {
@@ -2978,24 +2983,46 @@ color: #800000;
  margin-left: 1px;
 }
 #fb_likebutton {
-    float: left;
-    background-color: #ffffff;
-    margin-top: 33px;    
+       background-color: #FFFFFF;
+    float: right;
+    height: 28px;
+    margin-top: 14px;
     overflow: hidden;
     position: absolute;
-     margin-left: 5px;
-     width: 165px;
-    height: 25px;
+    right: 216px;
+    width: 230px;
 }
 
-/*
-#fb_likebutton {
-margin-left: -79px;
-    margin-top: -9px;
+.slideshowlink {
+ display:none;
 }
-#u_0_0 {
-  width: 164px;
+
+.flex-control-nav {
+ display: none;
 }
-.pls {
- background-color: #fffff;
-}*/
+.flex-direction-nav {
+display: none;
+ 
+}
+.entry-header img.wp-post-image {
+ margin: 0 20px 0 18px;
+}
+.slider-image img {
+ width: 100%;
+}
+.flexslider h2 {
+ position: absolute;
+ margin-left: 861px;
+    margin-top: 257px;
+    position: absolute;
+}
+.flexslider h2 a {
+ background-color: #800000;
+    border: 1px solid;
+    color: #FFFFFF;
+    display: block;
+    padding: 7px;
+}
+.flexslider h2 a:hover {
+  color: #ffffff;
+}

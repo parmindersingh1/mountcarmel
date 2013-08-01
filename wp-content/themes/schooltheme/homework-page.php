@@ -14,6 +14,21 @@
 
 get_header(); ?>
 
+<script type="text/javascript">
+
+jQuery(document).ready(function() {
+    jQuery('.datePicker').datepicker();
+  
+  var myDate = new Date();
+var prettyDate =(myDate.getMonth()+1) + '/' + myDate.getDate() + '/' +
+        myDate.getFullYear();
+jQuery(".datePicker").val(prettyDate);
+  
+  
+});
+
+</script>
+
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
                            <header class="entry-header">
@@ -39,7 +54,7 @@ Select Class:
 <select name="classlist" id="class_select">
 <option value=''>select</option>
 <?php 
-$sql = mysql_query("SELECT id,classname FROM classnames");
+$sql = mysql_query("SELECT id,classname FROM classnames order by sequence");
 while ($row = mysql_fetch_array($sql)){
 echo "<option value=".$row['id'].">" . $row['classname'] . "</option>";
 }
@@ -50,7 +65,7 @@ echo "<option value=".$row['id'].">" . $row['classname'] . "</option>";
 <br>
 <br>             
 
-		 Select Date:	<input type="date" id="homework_date" />
+		 Select Date:	<input type="text" id="homework_date" class="datePicker" />
 <br><br>
      <input type="submit" value="submit"/> 
                 </form>
@@ -85,7 +100,7 @@ echo "<option value=".$row['id'].">" . $row['classname'] . "</option>";
 <br>
 <br>             
 
-		 Select Date:	<input type="date" id="homework_date2" />
+		 Select Date:	<input type="text" id="homework_date2" class="datePicker"/>
 <br><br>
 
    Homework:  <textarea id="class_homework" rows="10" cols="40"></textarea>

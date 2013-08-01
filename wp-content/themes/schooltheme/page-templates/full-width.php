@@ -86,8 +86,8 @@ get_header(); ?>
 	<div id="my-wordpress-tabs-2" class="inactive_tab">
               <h1> Why Mount Carmel School? </h1>
 		<p>
-                  "Mount Carmel School is a Senior Secondary School being run under the aegis of Mount Carmel Educational Society, Chandigarh (Regd.), a group of Christian teachers, dedicated to the cause of complete moral, intellectual and social development of boys and girls. "<br>
-"Mount Carmel School is a Senior Secondary School being run under the aegis of Mount Carmel Educational"
+                  "Mount Carmel School is a Senior Secondary School being run under the aegis of Mount Carmel Educational Society, Chandigarh (Regd.), a group of Christian teachers, dedicated to the cause of complete moral, intellectual, spiritual and social development of boys and girls. "<br>
+
                 </p>
 	</div>
 	<div id="my-wordpress-tabs-3" class="inactive_tab">
@@ -97,7 +97,7 @@ get_header(); ?>
    <div id="circular_blog_content">
       <div id="forthcoming_circulars">     
     <?php
-	$args = array('post_type=circulars&posts_per_page=5');
+	$args = array('post_type=circular&posts_per_page=5');
 	$recent_posts = wp_get_recent_posts( $args );
       
 	foreach( $recent_posts as $recent ){

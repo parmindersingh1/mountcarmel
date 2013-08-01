@@ -36,15 +36,17 @@
 <body <?php body_class(); ?> >
 
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+
+<script>(function(d, s, id) {  
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=571282879561414";
   fjs.parentNode.insertBefore(js, fjs);
+  
 }(document, 'script', 'facebook-jssdk'));</script>
 <div id="fb_likebutton">
-<div class="fb-like" data-href="https://www.facebook.com/mcschool123" data-send="false" data-width="160" data-layout="count" data-show-faces="false"></div>
+<div class="fb-like" data-href="https://www.facebook.com/mountcarmelschoolchandigarhsector47b" data-send="false" data-width="200" data-show-faces="false" ></div>
 </div>
 
 <div id="page" class="hfeed site">
@@ -94,7 +96,11 @@
 <?php if (!is_page('home')) { ?>
 <?php if( get_theme_mod( 'slider_settings' ) == '') { ?>
                <div id="slider">
-               <?php echo do_shortcode("[metaslider id=4]"); ?>
+
+               
+
+
+
                </div>
 <?php } // end if ?>
 
@@ -103,7 +109,40 @@
 
 else { ?>
               <div id="slider">
-               <?php echo do_shortcode("[metaslider id=4]"); ?>
+
+
+               
+
+             <div class="flexslider">
+	  <ul class="slides">
+
+
+
+       <?php
+	query_posts(array('post_type' => 'slider', 'posts_per_page' => 3));
+	if(have_posts()) :
+	    while(have_posts()) : the_post();
+	?>
+	  <li>
+
+<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">read more..</a></h2>
+
+            <div class="slider-image">
+		<?php the_post_thumbnail(); ?>
+		</div>
+	  </li>
+            <?php
+	    endwhile;
+	endif;
+	wp_reset_query();
+	?>
+       
+            </ul>
+	</div>
+
+
+
+
                </div>
 <?php } // end else ?>
 

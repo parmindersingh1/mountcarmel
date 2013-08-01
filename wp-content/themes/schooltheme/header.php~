@@ -40,11 +40,11 @@
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=571282879561414";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div id="fb_likebutton">
-<div class="fb-like" data-href="https://www.facebook.com/mcschool123" data-send="false" data-width="160" data-layout="count" data-show-faces="false"></div>
+<div class="fb-like" data-send="false" data-width="200" data-show-faces="false"></div>
 </div>
 
 <div id="page" class="hfeed site">
@@ -94,7 +94,14 @@
 <?php if (!is_page('home')) { ?>
 <?php if( get_theme_mod( 'slider_settings' ) == '') { ?>
                <div id="slider">
-               <?php echo do_shortcode("[metaslider id=4]"); ?>
+
+               
+
+
+
+
+
+
                </div>
 <?php } // end if ?>
 
@@ -103,7 +110,17 @@
 
 else { ?>
               <div id="slider">
-               <?php echo do_shortcode("[metaslider id=4]"); ?>
+               
+
+
+ 
+
+
+
+
+
+
+
                </div>
 <?php } // end else ?>
 

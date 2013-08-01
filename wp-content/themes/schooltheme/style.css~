@@ -1,12 +1,11 @@
 /*
-Theme Name: Twenty Twelve
-Theme URI: http://wordpress.org/extend/themes/twentytwelve
-Author: the WordPress team
-Author URI: http://wordpress.org/
+Theme Name: School Theme
+Theme URI: http://app.mountcarmelchd.com
+Author: Parminder Singh
+Author URI: http://app.mountcarmelchd.com
 Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
 Version: 1.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 Text Domain: twentytwelve
 
@@ -667,10 +666,10 @@ footer[role="contentinfo"] {
 	padding: 1.714285714rem 0;
 }
 footer[role="contentinfo"] a {
-	color: #686868;
+	color: #C5C5C5;
 }
 footer[role="contentinfo"] a:hover {
-	color: #21759b;
+	color: #ffffff;
 }
 
 
@@ -1758,7 +1757,7 @@ background: url("images/footer_container_bkd.jpg") repeat-x scroll 0 0 transpare
 }
 .site-header {
 background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
-    height: 463px;
+    max-height: 463px;
     margin: auto;
     width: 940px;
 }
@@ -1817,12 +1816,12 @@ background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
     width: 265px;
 }
 #contact_email {
-    float: left;
+    float: right;
     height: 15px;
     margin: 0 0 5px;
     padding: 6px 0 0;
     text-align: right;
-    width: 257px;
+    width: 75px;
 }
 #contact_email a {
     color: #FFFFFF;
@@ -1887,6 +1886,7 @@ background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
     float: left;
     height: 46px;
     position: relative;
+     z-index: 0;
 }
 #primary_nav ul li a {
     color: #FFFFFF;
@@ -1934,7 +1934,7 @@ background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
     font-size: 1em;
     line-height: 23px;
     margin: 0 100px 0 0;
-    min-height: 116px;
+    min-height: 125px;
     padding: 0 17px;
     position: relative;
 }
@@ -2015,10 +2015,11 @@ background: url("images/header_background.jpg") repeat-x scroll 0 0 #910101;
     z-index: 4444;
 }
 #vice_pricipal_words {
- height:40px;
+ height:50px;
  background-color:#FCFFFF;
  margin-left: 14px;
  width: 300px;
+ line-height: 15px;
 }
 #primary { 
     background: none repeat scroll 0 0 #FFFFFF;
@@ -2220,11 +2221,10 @@ background: none repeat scroll 0 0 #FFFFFF;
 }
 
 .widget_nav_menu ul li a:hover {
-        background: url("images/arrow-brown.png") no-repeat scroll #E6CCCC;
+        background: url("images/arrow-brown.png") no-repeat scroll #D1AAAA;
         background-position: 14px 12px;        
 	color: #800000;
-        background-color: #D1AAAA;
-            
+                
 } 
 
 
@@ -2485,7 +2485,7 @@ box-shadow: 0px 0px 6px #343434;
     }
 .entry-content li {
  list-style: none;
-background: url("images/bullet_list.png") no-repeat scroll left 5px transparent;
+background: url("images/bullet_list.png") no-repeat scroll left 2px transparent;
  margin-bottom: 15px !important;
     padding-left: 2em !important;
 }
@@ -2742,7 +2742,7 @@ padding: 2px;
     background: url("images/button_bkd_home.png") no-repeat scroll 0 bottom transparent;
     width: 79px;
 }
-#primary_nav ul li.selectedPageRoot a {
+#primary_nav ul li.current-menu-item a {
     background: url("images/button_bkd_home.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li {
@@ -2756,7 +2756,7 @@ padding: 2px;
     background: url("images/button_bkd_about.png") no-repeat scroll 0 bottom transparent;
     width: 100px;
 }
-#primary_nav ul li + li.selectedPageRoot a {
+#primary_nav ul li + li.current-menu-item a {
     background: url("images/button_bkd_about.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li + li {
@@ -2770,7 +2770,7 @@ padding: 2px;
     background: url("images/button_bkd_admissions.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li.current-menu-item a {
     background: url("images/button_bkd_admissions.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li + li + li {
@@ -2784,51 +2784,56 @@ padding: 2px;
     background: url("images/button_bkd_guidelines.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li + li.current-menu-item a {
     background: url("images/button_bkd_guidelines.png") no-repeat scroll 0 bottom transparent;
 }
-#primary_nav ul li + li + li + li + li {
+
+#primary_nav ul li + li + li + li + li  {
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li a {
-    background: url("images/button_bkd_facilities.png") no-repeat scroll 0 top transparent;
+#primary_nav ul li + li + li + li + li  a {
+    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 top transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li a:hover {
-    background: url("images/button_bkd_facilities.png") no-repeat scroll 0 bottom transparent;
-    width: 116px;
+#primary_nav ul li + li + li + li + li  a:hover {
+    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
+   width: 116px;
 }
-#primary_nav ul li + li + li + li + li.selectedPageRoot a {
-    background: url("images/button_bkd_facilities.png") no-repeat scroll 0 bottom transparent;
+#primary_nav ul li + li + li + li + li.current-menu-item a {
+    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
 }
 #primary_nav ul li + li + li + li + li + li {
     width: 116px;
 }
 #primary_nav ul li + li + li + li + li + li a {
-    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 top transparent;
-    width: 116px;
-}
-#primary_nav ul li + li + li + li + li + li a:hover {
-    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
-   width: 116px;
-}
-#primary_nav ul li + li + li + li + li + li.selectedPageRoot a {
-    background: url("images/button_bkd_calendar.png") no-repeat scroll 0 bottom transparent;
-}
-#primary_nav ul li + li + li + li + li + li + li {
-    width: 116px;
-}
-#primary_nav ul li + li + li + li + li + li + li a {
     background: url("images/button_bkd_gallery.png") no-repeat scroll 0 top transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li + li + li a:hover {
+#primary_nav ul li + li + li + li + li + li a:hover {
     background: url("images/button_bkd_gallery.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li + li + li + li.current-menu-item a {
     background: url("images/button_bkd_gallery.png") no-repeat scroll 0 bottom transparent;
 }
+
+
+#primary_nav ul  li + li + li + li + li + li + li {
+    width: 116px;
+}
+#primary_nav ul li + li + li + li + li + li + li a {
+    background: url("images/button_bkd_media.png") no-repeat scroll 0 top transparent;
+    width: 116px;
+}
+#primary_nav ul li + li + li + li + li + li + li a:hover {
+    background: url("images/button_bkd_media.png") no-repeat scroll 0 bottom transparent;
+    width: 116px;
+}
+#primary_nav ul li + li + li + li + li + li + li.current-menu-item a {
+    background: url("images/button_bkd_media.png") no-repeat scroll 0 bottom transparent;
+}
+
+
 #primary_nav ul li + li + li + li + li + li + li + li {
     width: 116px;
 }
@@ -2840,11 +2845,9 @@ padding: 2px;
     background: url("images/button_bkd_contact.png") no-repeat scroll 0 bottom transparent;
     width: 116px;
 }
-#primary_nav ul li + li + li + li + li + li + li + li.selectedPageRoot a {
+#primary_nav ul li + li + li + li + li + li + li + li.current-menu-item a {
     background: url("images/button_bkd_contact.png") no-repeat scroll 0 bottom transparent;
 }
-
-
 
 
 #form {
@@ -2971,3 +2974,143 @@ color: #800000;
 #maps_id {
  text-align: center;
 }
+.maps {
+  width: 165px;
+}
+.flexslider .slides img {
+ margin-left: 1px;
+}
+#fb_likebutton {
+       background-color: #FFFFFF;
+    float: right;
+    height: 28px;
+    margin-top: 14px;
+    overflow: hidden;
+    position: absolute;
+    right: 216px;
+    width: 230px;
+}
+
+.slideshowlink {
+ display:none;
+}
+
+/* slider */
+
+*/ slider effects */
+.flexslider {
+    margin: 0;
+    padding: 0;   
+    position:relative;
+}
+.flexslider .flex-viewport {
+    overflow: visible !important;
+}
+.flexslider .flex-viewport ul {
+    background: none repeat scroll 0 0 #000000 !important;
+}
+.flexslider ul.slides li {
+    display: none;
+    opacity: 0.2;
+}
+.flexslider ul.slides li.flex-active-slide {
+    opacity: 1;
+}
+.flexslider ul.slides {
+    margin: 0;
+    padding: 0;
+    width: 978px;
+}
+.flexslider ul.slides li {
+    display: inline;
+    float: left;
+    list-style: none outside none;
+    width: 978px;
+}
+
+
+.flex-container {
+        border: 1px solid #CCCCCC; 
+	max-width: 978px;
+	margin: 0 auto;
+}
+
+.slider-image {
+  height: 348px;
+    right: 0;
+ }
+.slider-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.flex-caption {
+   background-image: url("images/vignette.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    min-height: 280px;
+    padding: 68px 40px 0;
+    position: relative;
+    width: 376px;
+   z-index: 10;  
+}
+.background-green {
+  background-color: #66FF99;
+}
+.background-red {
+  background-color: #FF4D4D;
+}
+.background-blue {
+  background-color: #5959FF;
+}
+.flex-caption h1 {
+    color: #FFFFFF;
+    font-size: 4.0em;
+    line-height: 1.21;
+    margin-bottom: 32px;
+}
+.flex-caption h1 a {
+     color: #FFFFFF;
+    text-decoration: none;
+}
+
+.slide-callout p {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.898);
+    color: #363636;
+    float: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    min-width: 398px;
+    max-width: 750px;
+    min-height: 19px;
+    padding: 6px 9px 6px 9px;
+    text-transform: uppercase;
+    
+}
+
+.slide-callout .more a {
+    background: none repeat scroll 0 0 #A51C30;;
+    color: #FFFFFF;
+    display: inline-block;
+    font: italic 1.15em Georgia,"Times New Roman",serif;
+    min-height: 19px;
+    padding: 6px 9px;
+    text-transform: none;
+    text-decoration: none;    
+}
+.slide-callout .more {
+    color: #363636;   
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    max-width: 750px;
+    min-height: 19px;
+    text-transform: uppercase;
+}
+.slide-callout { 
+    width: 900px;
+}
+

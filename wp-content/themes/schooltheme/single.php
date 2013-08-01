@@ -14,8 +14,8 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
                                   <?php if('gallery' == get_post_type()) : ?> 
-                      <div id="gallery_single" >                                                               
-                                  <?php echo do_shortcode("[gallery]"); ?>
+                               <div id="gallery_single" >                                                               
+                                  <?php echo do_shortcode("[gallery link='file']"); ?>
                                 </div><!-- #gallery_single -->
                            <?php else : ?>
 	                  <?php get_template_part( 'content', get_post_format() ); ?>
@@ -27,11 +27,9 @@ get_header(); ?>
 
          <div id="previous_page_link">       
            
-        <?php if('gallery' == get_post_type()) : ?>                
-          <a href=" <?php echo get_permalink(get_page_by_title( 'Photo Gallery' )); ?> ">« Return to Gallery page</a>
-       <?php else : ?>
+       
                   <a href="javascript:history.back();">« Return to previous page</a>
-            <?php endif; // get_post_type() ?>
+          
          </div>
 
 	</div><!-- #primary -->

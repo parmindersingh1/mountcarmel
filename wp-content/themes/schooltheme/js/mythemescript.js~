@@ -1,5 +1,5 @@
 
-( function( $ ) {
+( function( $ ) {  
         $(".tab_read_more").empty();
         $("#tab1").click(function(e){            
            $("#my-wordpress-tabs-1").addClass("active_tab");                                          
@@ -22,7 +22,7 @@
            $("#tab1").removeClass("selected_tab");
 	   $("#tab3").removeClass("selected_tab");
            $(".tab_read_more").empty();
-	   $(".tab_read_more").append("<p><a href='http://localhost/wordpress/why-mount-carmel-school/'>Read Full Message</a></p>");
+	   $(".tab_read_more").append("<p><a href='http://localhost/mountcarmel/why-mount-carmel-school/'>Read Full Message</a></p>");
          });
 
 	$("#tab3").click(function(e){            
@@ -34,7 +34,7 @@
            $("#tab2").removeClass("selected_tab");
 	   $("#tab1").removeClass("selected_tab"); 
 	   $(".tab_read_more").empty();
-	  $(".tab_read_more").append("<p><a href='http://localhost/wordpress/circulars-2'>Read Full Message</a></p>");
+	  $(".tab_read_more").append("<p><a href='http://localhost/mountcarmel/circulars-2'>Read Full Message</a></p>");
          });
 
 	$("#searchsubmit").click(function(e){
@@ -66,26 +66,27 @@ $('#form form').submit(function(e){
 e.preventDefault();
 var id=$('#class_select :selected').val();
 var date=$('#homework_date').val();
+
  if((id=="") || (id==null))
           {     
                    $("#error_msg").empty();
                    $("#error_msg").append("<p>please select class</p>")                    
                   $("#error_msg").css("display","block");
           }
-	
+
  else if((date=="") || (date==null))
           {     
                 $("#error_msg").empty();
                  $("#error_msg").append("<p>please select date</p>")                    
                   $("#error_msg").css("display","block");
           }
-	
+
 else {
 
 
  $.ajax({
   type: 'POST',
-  url: 'http://localhost/wordpress/wp-admin/admin-ajax.php',
+  url: 'http://localhost/mountcarmel/wp-admin/admin-ajax.php',
   data: {
   action: 'MyAjaxFunction',
   id: id,
@@ -128,14 +129,14 @@ var homework=$("#class_homework").val();
                    $("#error_msg").append("<p>please select class</p>")                    
                   $("#error_msg").css("display","block");
           }
-	
+
  else if((date=="") || (date==null))
           {     
              $("#error_msg").empty();
                  $("#error_msg").append("<p>please select date</p>")                    
                   $("#error_msg").css("display","block");
           }
-	
+
 else if((homework=="") || (homework==null))
           {     
                   $("#error_msg").empty();
@@ -145,7 +146,7 @@ else if((homework=="") || (homework==null))
 else {
 $.ajax({
   type: 'POST',
-  url: 'http://localhost/wordpress/wp-admin/admin-ajax.php',
+  url: 'http://localhost/mountcarmel/wp-admin/admin-ajax.php',
   data: {
   action: 'MyAjaxFunction2',
   id: id,
@@ -170,13 +171,16 @@ $.ajax({
 
 
 
+
+
+
 } )( jQuery );
 
 
 
 
 jQuery(document).ready(function($){         
-	
+
        });
 
 function bookmarksite(title,url){
@@ -198,4 +202,7 @@ $(document).ready(function(){
   
   
 });
+
+
+
 

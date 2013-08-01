@@ -1,7 +1,8 @@
-﻿<?php
+<?php
     // Add the banner_menu Custom Post Type
     include("functions/mytheme-post-types.php");
-    include("functions/mytheme-post-types2.php");
+    include("functions/mytheme-post-types2.php"); 
+    include("functions/mytheme-post-types3.php"); 
 ?>
 
 <?php
@@ -488,8 +489,21 @@ function mv_my_theme_scripts()
 }
 add_action('wp_enqueue_scripts','mv_my_theme_scripts');
 
+function my_scripts_method() {
+	wp_enqueue_script('custom-script',get_template_directory_uri() . '/js/jquery.flexslider-min.js',array( 'jquery' ));
+        wp_enqueue_script('datepicker-script',get_template_directory_uri() . '/js/bootstrap-datepicker.js',array( 'jquery' ));
+}
 
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 
+function my_add_styles() {
+    wp_enqueue_style('flexslider', get_template_directory_uri() .'css/flexslider.css');
+    wp_enqueue_style('datepicker', get_template_directory_uri() .'css/datepicker.css');
+}
+add_action('wp_enqueue_scripts', 'my_add_styles');
+
+wp_enqueue_script('jquery-ui-datepicker');
+wp_enqueue_style('jquery-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/smoothness/jquery-ui.css');
 
 function catch_that_image() {
   global $post, $posts;
@@ -520,14 +534,16 @@ function MyAjaxFunction(){
   //get the data from ajax() call
    $id = $_REQUEST['id'];
    $date = $_REQUEST['date'];
-   $sql = mysql_query("SELECT homework FROM school_homework where homework_date='".$date."' and class_id=".$id);
+   $dateTime = new DateTime($date);
+   $add_date = $dateTime->format("Y-m-d");
+   $sql = mysql_query("SELECT homework FROM school_homework where homework_date='".$add_date."' and class_id=".$id);
   while ($row = mysql_fetch_array($sql)){
      $results = "<h2>".$row[homework]."</h2>";
   }
-    
+      $results1=nl2br($results);
        
   // Return the String
-   die($results);
+   die($results1);
   }
   // creating Ajax call for WordPress
    add_action( 'wp_ajax_nopriv_MyAjaxFunction', 'MyAjaxFunction' );
@@ -539,7 +555,10 @@ function MyAjaxFunction2(){
    $id = $_REQUEST['id'];
    $date = $_REQUEST['date'];
    $homework=$_REQUEST['homework'];
-   $sql = mysql_query("INSERT INTO school_homework(class_id,homework,homework_date) VALUES(".$id.",'".$homework."','".$date."')");
+   $homework1=nl2br($homework);
+   $dateTime = new DateTime($date);
+   $add_date = $dateTime->format("Y-m-d");
+   $sql = mysql_query("INSERT INTO school_homework(class_id,homework,homework_date) VALUES(".$id.",'".$homework1."','".$add_date."')");
     $results=$sql;
   // Return the String
    die($results);
@@ -580,3 +599,18 @@ $wp_customize->add_control(
 }
 add_action( 'customize_register', 'example_customizer' );
 
+
+function the_title_trim($title) {
+	$title = attribute_escape($title);
+	$findthese = array(
+		'#Protected:#',
+		'#Private:#'
+	);
+	$replacewith = array(
+		'', // What to replace "Protected:" with
+		'' // What to replace "Private:" with
+	);
+	$title = preg_replace($findthese, $replacewith, $title);
+	return $title;
+}
+add_filter('the_title', 'the_title_trim');
